@@ -1,0 +1,12 @@
+## Interface: 16001
+## Title: Lingua
+## Notes: Tags German and French chat and shows an English translation on hover. /lingua
+## Author: Frank
+## Version: 1.1
+## SavedVariables: LinguaDB
+
+Dict_DE.lua
+Dict_FR.lua
+Extra_DE.lua
+Extra_FR.lua
+Core.lua
