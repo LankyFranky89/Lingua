@@ -2,7 +2,7 @@
 ## Title: Lingua
 ## Notes: Tags German and French chat and shows an English translation on hover. /lingua
 ## Author: Frank
-## Version: 1.1
+## Version: 1.1.2
 ## SavedVariables: LinguaDB
 
 Dict_DE.lua

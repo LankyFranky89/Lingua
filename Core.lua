@@ -1,3 +1,7 @@
+local function Secret(v) -- chat hidden by the game (or faked by /cc secret)
+  if CopyCatFakeSecret and CopyCatFakeSecret > GetTime() then return true end
+  return issecretvalue ~= nil and issecretvalue(v) == true
+end
 local ADDON, ns = ...
 local dicts = ns.dicts
 
@@ -151,7 +155,7 @@ end
 
 ns.analyse = analyse
 local function filter(self, event, msg, ...)
-  if not db or not db.enabled then return false end
+  if not db or not db.enabled or Secret(msg) then return false end
   local ch = events[event]
   if not ch or not db.channels[ch] then return false end
   if type(msg) ~= "string" or msg == "" then return false end
